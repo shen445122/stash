@@ -34,6 +34,15 @@ Avoid re-discovering setup issues by hand on every new Mac.
   - download `chi_sim.traineddata`
 
 ### Verification currently covered
+- `architecture`
+  - `uname -m`
+  - Homebrew prefix check
+  - Apple Silicon Rosetta hint
+- `openclaw-core`
+  - `openclaw` CLI presence
+  - `~/.openclaw/openclaw.json` presence
+  - `openclaw status`
+  - `openclaw gateway status`
 - `apple-notes-applescript`
   - folder listing
   - title search smoke test
@@ -89,7 +98,7 @@ This playbook turns migration into:
 
 ## Suggested next improvements
 
-- Add architecture-aware checks (`uname -m`, Homebrew prefix)
-- Add optional Rosetta detection for Apple Silicon
-- Add a dedicated `verify-openclaw-core.sh` for gateway / config / session tooling
 - Add richer Apple Notes write-path verification once we want non-readonly smoke tests
+- Add optional PATH diagnostics for mixed Intel / Apple Silicon toolchains
+- Add skill-by-skill bootstrap status summary output
+- Add a machine-readable JSON report mode for verify scripts

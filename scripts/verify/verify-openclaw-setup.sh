@@ -14,6 +14,12 @@ run_check() {
 
 FAILED=0
 
+printf '\n### Verify: architecture ###\n'
+run_check "$VERIFY_DIR/verify-architecture.sh" || FAILED=1
+
+printf '\n### Verify: openclaw-core ###\n'
+run_check "$VERIFY_DIR/verify-openclaw-core.sh" || FAILED=1
+
 printf '\n### Verify: apple-notes-applescript ###\n'
 run_check "$VERIFY_DIR/verify-apple-notes-applescript.sh" || FAILED=1
 
