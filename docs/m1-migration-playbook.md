@@ -12,6 +12,7 @@ Avoid re-discovering setup issues by hand on every new Mac.
    - `bash scripts/bootstrap/bootstrap-mac.sh`
 4. Then run:
    - `bash scripts/verify/verify-openclaw-setup.sh`
+   - or JSON mode: `bash scripts/verify/verify-openclaw-setup.sh --json`
 5. Fix only the failing items
 
 ## What this setup covers
@@ -100,5 +101,5 @@ This playbook turns migration into:
 
 - Add richer Apple Notes write-path verification once we want non-readonly smoke tests
 - Add optional PATH diagnostics for mixed Intel / Apple Silicon toolchains
-- Add skill-by-skill bootstrap status summary output
-- Add a machine-readable JSON report mode for verify scripts
+- Add skill-by-skill bootstrap status summary output beyond pass/fail
+- Add report persistence (write JSON snapshots to disk for comparison across machines)
