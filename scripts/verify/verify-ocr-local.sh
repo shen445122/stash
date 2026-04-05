@@ -4,34 +4,16 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 SKILL_DIR="$ROOT_DIR/skills/ocr-local"
 TEST_IMAGE="$ROOT_DIR/avatar_quantum_fox_sketch.png"
+source "$ROOT_DIR/scripts/verify/lib.sh"
 
-if [ ! -d "$SKILL_DIR" ]; then
-  echo "[FAIL] ocr-local: skill dir missing: $SKILL_DIR"
-  exit 1
-fi
-
-if [ ! -f "$SKILL_DIR/scripts/ocr.js" ]; then
-  echo "[FAIL] ocr-local: scripts/ocr.js missing"
-  exit 1
-fi
-
-if [ ! -d "$SKILL_DIR/node_modules/tesseract.js" ]; then
-  echo "[FAIL] ocr-local: tesseract.js dependency missing (run npm install)"
-  exit 1
-fi
-
-if [ ! -f "$SKILL_DIR/.tessdata/eng.traineddata" ]; then
-  echo "[FAIL] ocr-local: eng.traineddata missing"
-  exit 1
-fi
-
-if [ ! -f "$SKILL_DIR/.tessdata/chi_sim.traineddata" ]; then
-  echo "[FAIL] ocr-local: chi_sim.traineddata missing"
-  exit 1
-fi
+require_dir "$SKILL_DIR" "ocr-local skill dir" || exit 1
+require_file "$SKILL_DIR/scripts/ocr.js" "ocr.js" || exit 1
+require_dir "$SKILL_DIR/node_modules/tesseract.js" "tesseract.js dependency" || exit 1
+require_file "$SKILL_DIR/.tessdata/eng.traineddata" "eng.traineddata" || exit 1
+require_file "$SKILL_DIR/.tessdata/chi_sim.traineddata" "chi_sim.traineddata" || exit 1
 
 if [ ! -f "$TEST_IMAGE" ]; then
-  echo "[WARN] ocr-local: test image missing, dependency checks passed but smoke test skipped"
+  warn "ocr-local: test image missing, dependency checks passed but smoke test skipped"
   exit 0
 fi
 
@@ -41,10 +23,15 @@ STATUS=$?
 set -e
 
 if [ $STATUS -eq 0 ]; then
-  echo "[PASS] ocr-local: smoke test exited 0"
+  pass "ocr-local: smoke test exited 0"
   exit 0
 fi
 
-echo "[FAIL] ocr-local: smoke test failed"
+fail "ocr-local: smoke test failed"
 printf '%s\n' "$OUTPUT"
+
+if printf '%s' "$OUTPUT" | grep -q "fetch failed"; then
+  info "Likely current known issue: Tesseract.js local traineddata path handling still not compatible in this environment"
+fi
+
 exit 1

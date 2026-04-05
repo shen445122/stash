@@ -35,14 +35,18 @@ Avoid re-discovering setup issues by hand on every new Mac.
 
 ### Verification currently covered
 - `apple-notes-applescript`
-  - can list folders with `bash scripts/notes-folders.sh --counts`
+  - folder listing
+  - title search smoke test
+  - note read smoke test
 - `ocr-local`
   - dependency presence
   - traineddata presence
   - smoke test on `avatar_quantum_fox_sketch.png`
+  - known-failure hint when current Tesseract.js local path issue appears
 - `peekaboo`
   - binary exists
   - `peekaboo --help` callable
+  - `peekaboo permissions` branch when binary is installed
 
 ## Known manual steps on a new Mac
 
@@ -82,3 +86,10 @@ This playbook turns migration into:
 - install
 - verify
 - fix only failures
+
+## Suggested next improvements
+
+- Add architecture-aware checks (`uname -m`, Homebrew prefix)
+- Add optional Rosetta detection for Apple Silicon
+- Add a dedicated `verify-openclaw-core.sh` for gateway / config / session tooling
+- Add richer Apple Notes write-path verification once we want non-readonly smoke tests

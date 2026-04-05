@@ -14,8 +14,13 @@ run_check() {
 
 FAILED=0
 
+printf '\n### Verify: apple-notes-applescript ###\n'
 run_check "$VERIFY_DIR/verify-apple-notes-applescript.sh" || FAILED=1
+
+printf '\n### Verify: ocr-local ###\n'
 run_check "$VERIFY_DIR/verify-ocr-local.sh" || FAILED=1
+
+printf '\n### Verify: peekaboo ###\n'
 run_check "$VERIFY_DIR/verify-peekaboo.sh" || FAILED=1
 
 if [ "$FAILED" -eq 0 ]; then
