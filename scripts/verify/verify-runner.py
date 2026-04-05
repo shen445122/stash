@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
+import datetime as dt
 import json
 import os
+import platform
 import subprocess
 import sys
 from pathlib import Path
@@ -51,11 +53,19 @@ def print_human(results):
     return 1 if failed else 0
 
 
-def main():
-    json_mode = '--json' in sys.argv
-    results = [run_check(name, script) for name, script in CHECKS]
-    payload = {
+def slugify(value: str) -> str:
+    return ''.join(c.lower() if c.isalnum() else '-' for c in value).strip('-') or 'unknown-host'
+
+
+def build_payload(results):
+    return {
         'root': str(ROOT),
+        'generatedAt': dt.datetime.now().astimezone().isoformat(),
+        'machine': {
+            'hostname': platform.node(),
+            'arch': platform.machine(),
+            'platform': platform.platform(),
+        },
         'results': results,
         'summary': {
             'total': len(results),
@@ -63,6 +73,27 @@ def main():
             'failed': sum(1 for r in results if r['status'] == 'fail'),
         }
     }
+
+
+def maybe_write_report(payload):
+    if '--write-report' not in sys.argv:
+        return None
+    out_dir = ROOT / 'output' / 'verify-reports'
+    out_dir.mkdir(parents=True, exist_ok=True)
+    host = slugify(payload['machine']['hostname'])
+    stamp = dt.datetime.now().strftime('%Y%m%d-%H%M%S')
+    out_path = out_dir / f'verify-{host}-{stamp}.json'
+    out_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
+    return out_path
+
+
+def main():
+    json_mode = '--json' in sys.argv
+    results = [run_check(name, script) for name, script in CHECKS]
+    payload = build_payload(results)
+    report_path = maybe_write_report(payload)
+    if report_path is not None and not json_mode:
+        print(f"[INFO] wrote report: {report_path}")
     if json_mode:
         print(json.dumps(payload, ensure_ascii=False, indent=2))
         sys.exit(0 if payload['summary']['failed'] == 0 else 1)
