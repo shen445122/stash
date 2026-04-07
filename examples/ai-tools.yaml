@@ -1,0 +1,57 @@
+name: AI Tools Collapsed Tiles
+
+tiles:
+  - name: ChatGPT-Web
+    title: ChatGPT
+    icon: https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/img/chatgpt.png
+    collapsed: true
+    url: https://chatgpt.com
+
+  - name: Claude-Check
+    title: Claude
+    icon: https://www.google.com/s2/favicons?sz=64&domain=claude.ai
+    collapsed: true
+    url: https://claude.ai
+
+  - name: Gemini-Check
+    title: Gemini
+    icon: https://www.google.com/s2/favicons?sz=64&domain=gemini.google.com
+    collapsed: true
+    url: https://gemini.google.com
+
+  - name: Grok-Check
+    title: Grok
+    icon: https://www.google.com/s2/favicons?sz=64&domain=x.ai
+    collapsed: true
+    url: https://x.ai
+
+  - name: Perplexity-Check
+    title: Perplexity
+    icon: https://www.google.com/s2/favicons?sz=64&domain=perplexity.ai
+    collapsed: true
+    url: https://www.perplexity.ai
+
+  - name: Copilot-Check
+    title: GitHub Copilot
+    icon: https://www.google.com/s2/favicons?sz=64&domain=github.com
+    collapsed: true
+    url: https://github.com/features/copilot
+
+script-providers:
+  ChatGPT-Web:
+    url: https://raw.githubusercontent.com/shen445122/stash/main/tiles/chatgpt-web.js
+
+  Claude-Check:
+    url: https://raw.githubusercontent.com/shen445122/stash/main/tiles/claude.js
+
+  Gemini-Check:
+    url: https://raw.githubusercontent.com/shen445122/stash/main/tiles/gemini.js
+
+  Grok-Check:
+    url: https://raw.githubusercontent.com/shen445122/stash/main/tiles/grok.js
+
+  Perplexity-Check:
+    url: https://raw.githubusercontent.com/shen445122/stash/main/tiles/perplexity.js
+
+  Copilot-Check:
+    url: https://raw.githubusercontent.com/shen445122/stash/main/tiles/copilot.js

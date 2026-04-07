@@ -1,0 +1,57 @@
+name: Developer Sites Collapsed Tiles
+
+tiles:
+  - name: GitHub-Check
+    title: GitHub
+    icon: https://www.google.com/s2/favicons?sz=64&domain=github.com
+    collapsed: true
+    url: https://github.com
+
+  - name: StackOverflow-Check
+    title: Stack Overflow
+    icon: https://www.google.com/s2/favicons?sz=64&domain=stackoverflow.com
+    collapsed: true
+    url: https://stackoverflow.com
+
+  - name: Vercel-Check
+    title: Vercel
+    icon: https://www.google.com/s2/favicons?sz=64&domain=vercel.com
+    collapsed: true
+    url: https://vercel.com
+
+  - name: Cloudflare-Check
+    title: Cloudflare
+    icon: https://www.google.com/s2/favicons?sz=64&domain=cloudflare.com
+    collapsed: true
+    url: https://www.cloudflare.com
+
+  - name: OpenAI-Check
+    title: OpenAI
+    icon: https://www.google.com/s2/favicons?sz=64&domain=openai.com
+    collapsed: true
+    url: https://openai.com
+
+  - name: Anthropic-Check
+    title: Anthropic
+    icon: https://www.google.com/s2/favicons?sz=64&domain=anthropic.com
+    collapsed: true
+    url: https://www.anthropic.com
+
+script-providers:
+  GitHub-Check:
+    url: https://raw.githubusercontent.com/shen445122/stash/main/tiles/github.js
+
+  StackOverflow-Check:
+    url: https://raw.githubusercontent.com/shen445122/stash/main/tiles/stackoverflow.js
+
+  Vercel-Check:
+    url: https://raw.githubusercontent.com/shen445122/stash/main/tiles/vercel.js
+
+  Cloudflare-Check:
+    url: https://raw.githubusercontent.com/shen445122/stash/main/tiles/cloudflare.js
+
+  OpenAI-Check:
+    url: https://raw.githubusercontent.com/shen445122/stash/main/tiles/openai.js
+
+  Anthropic-Check:
+    url: https://raw.githubusercontent.com/shen445122/stash/main/tiles/anthropic.js

@@ -1,0 +1,48 @@
+name: Streaming Collapsed Tiles
+
+tiles:
+  - name: YouTube-Check
+    title: YouTube
+    icon: https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/img/youtube.png
+    collapsed: true
+    url: https://www.youtube.com
+
+  - name: Netflix-Check
+    title: Netflix
+    icon: https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/img/netflix.png
+    collapsed: true
+    url: https://www.netflix.com
+
+  - name: DisneyPlus-Check
+    title: Disney+
+    icon: https://www.google.com/s2/favicons?sz=64&domain=disneyplus.com
+    collapsed: true
+    url: https://www.disneyplus.com
+
+  - name: PrimeVideo-Check
+    title: Prime Video
+    icon: https://www.google.com/s2/favicons?sz=64&domain=primevideo.com
+    collapsed: true
+    url: https://www.primevideo.com
+
+  - name: Bilibili-Check
+    title: Bilibili
+    icon: https://www.google.com/s2/favicons?sz=64&domain=bilibili.com
+    collapsed: true
+    url: https://www.bilibili.com
+
+script-providers:
+  YouTube-Check:
+    url: https://raw.githubusercontent.com/shen445122/stash/main/tiles/youtube.js
+
+  Netflix-Check:
+    url: https://raw.githubusercontent.com/shen445122/stash/main/tiles/netflix.js
+
+  DisneyPlus-Check:
+    url: https://raw.githubusercontent.com/shen445122/stash/main/tiles/disneyplus.js
+
+  PrimeVideo-Check:
+    url: https://raw.githubusercontent.com/shen445122/stash/main/tiles/primevideo.js
+
+  Bilibili-Check:
+    url: https://raw.githubusercontent.com/shen445122/stash/main/tiles/bilibili.js
