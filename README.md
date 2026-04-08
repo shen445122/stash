@@ -9,12 +9,14 @@ Stash 自用配置与示例集合。
 - `ai-tools.stoverride`：AI 工具折叠面板
 - `streaming.stoverride`：流媒体折叠面板
 - `developer-sites.stoverride`：开发者站点折叠面板
+- `stash-ru-bundle.stoverride`：引入 remnawave 模板的独立 Stash override
 
 ### 对应示例
 - `examples/collapsed-tiles.yaml`
 - `examples/ai-tools.yaml`
 - `examples/streaming.yaml`
 - `examples/developer-sites.yaml`
+- `examples/stash-ru-bundle.yaml`
 
 ### 本仓库自托管脚本
 - `tiles/*.js`
