@@ -1,4 +1,5 @@
 name: AI Tools Collapsed Tiles
+description: AI 工具折叠面板，聚合 ChatGPT、Claude、Gemini、Grok、Perplexity、Copilot。
 
 tiles:
   - name: ChatGPT-Web

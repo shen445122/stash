@@ -1,4 +1,5 @@
 name: Collapsed Tiles Example
+description: 基础折叠面板示例，包含 ChatGPT、YouTube、Netflix 等常见站点。
 
 tiles:
   - name: ChatGPT-Web-Check

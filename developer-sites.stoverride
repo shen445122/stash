@@ -1,4 +1,5 @@
 name: Developer Sites Collapsed Tiles
+description: 开发者站点折叠面板，聚合 GitHub、Stack Overflow、Vercel、Cloudflare、OpenAI、Anthropic。
 
 tiles:
   - name: GitHub-Check

@@ -1,4 +1,5 @@
 name: Streaming Collapsed Tiles
+description: 流媒体折叠面板，聚合 YouTube、Netflix、Disney+、Prime Video、Bilibili。
 
 tiles:
   - name: YouTube-Check
