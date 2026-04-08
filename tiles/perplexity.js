@@ -1,3 +1,1 @@
-// Auto-generated placeholder script for Stash tile checks
-// Repo: shen445122/stash
-module.exports = { title: "Perplexity", result: "ok" };
+module.exports = { title: "Perplexity", content: "TODO: implement real check", status: "info" };

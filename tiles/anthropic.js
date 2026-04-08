@@ -1,3 +1,1 @@
-// Auto-generated placeholder script for Stash tile checks
-// Repo: shen445122/stash
-module.exports = { title: "Anthropic", result: "ok" };
+module.exports = { title: "Anthropic", content: "TODO: implement real check", status: "info" };

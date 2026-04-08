@@ -1,3 +1,1 @@
-// Auto-generated placeholder script for Stash tile checks
-// Repo: shen445122/stash
-module.exports = { title: "Vercel", result: "ok" };
+module.exports = { title: "Vercel", content: "TODO: implement real check", status: "info" };

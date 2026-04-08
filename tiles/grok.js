@@ -1,3 +1,1 @@
-// Auto-generated placeholder script for Stash tile checks
-// Repo: shen445122/stash
-module.exports = { title: "Grok", result: "ok" };
+module.exports = { title: "Grok", content: "TODO: implement real check", status: "info" };

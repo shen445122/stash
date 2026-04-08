@@ -1,3 +1,1 @@
-// Auto-generated placeholder script for Stash tile checks
-// Repo: shen445122/stash
-module.exports = { title: "Disney+", result: "ok" };
+module.exports = { title: "Disney+", content: "TODO: implement real check", status: "info" };

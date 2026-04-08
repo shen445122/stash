@@ -23,6 +23,12 @@ Stash 自用配置与示例集合。
 
 ## 说明
 
+### JS 状态
+
+- 第一批已做成可执行检查版本：`chatgpt-web.js`、`chatgpt-app.js`、`youtube.js`、`netflix.js`
+- 其余 `tiles/*.js` 当前为占位版本，后续可以继续升级为真实检测逻辑。
+
+
 当前所有配置文件里引用的 `script-providers` 都已经改为指向本仓库内的 JS 文件，不再依赖外部仓库脚本。
 
 推荐 raw 链接格式：

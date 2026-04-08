@@ -1,3 +1,1 @@
-// Auto-generated placeholder script for Stash tile checks
-// Repo: shen445122/stash
-module.exports = { title: "Gemini", result: "ok" };
+module.exports = { title: "Gemini", content: "TODO: implement real check", status: "info" };
