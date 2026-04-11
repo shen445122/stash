@@ -35,7 +35,7 @@
 
 ## 脚本状态
 
-### 第一批已做成可执行检查版本
+### 已做成可执行检查版本
 - `chatgpt-web.js`
 - `chatgpt-app.js`
 - `youtube.js`
@@ -44,27 +44,26 @@
 - `vercel.js`
 - `cloudflare.js`
 - `openai.js`
+- `claude.js`
+- `gemini.js`
+- `copilot.js`
+- `bilibili.js`
 
 这些脚本已经从 `TODO` 占位提升到**真实可运行的可用检查版本**。
 
 ### 仍待继续升级的脚本
-- `claude.js`
-- `gemini.js`
 - `grok.js`
 - `perplexity.js`
-- `copilot.js`
 - `disneyplus.js`
 - `primevideo.js`
-- `bilibili.js`
 - `stackoverflow.js`
 - `anthropic.js`
 
-这些文件目前仍适合继续做第二批优化，优先建议从：
-- `claude.js`
-- `gemini.js`
-- `copilot.js`
-- `bilibili.js`
-开始。
+下一批优先建议：
+- `perplexity.js`
+- `stackoverflow.js`
+- `anthropic.js`
+- `primevideo.js`
 
 ---
 
