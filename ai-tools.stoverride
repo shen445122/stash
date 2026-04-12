@@ -4,6 +4,7 @@ desc: >-
   AI 工具折叠面板，适合直接作为常用 AI 服务检测 pack。
   聚合 ChatGPT、Claude、Gemini、Grok、Perplexity、GitHub Copilot，
   默认接入本仓库自托管 checker 脚本。
+  Version: v2026.04.12-1
 
 tiles:
   - name: ChatGPT-Web

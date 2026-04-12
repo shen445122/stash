@@ -2,6 +2,7 @@ name: stash-ru-bundle
 desc: >-
   基于 remnawave/templates 的 stash-ru-bundle 模板保存的独立 Stash override。
   保留原始模板结构，适合作为 Russian bundle / messaging / media 路由的独立方案参考。
+  Version: v2026.04.12-1
 proxy-groups:
   - name: 🌍 VPN
     icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hijacking.png

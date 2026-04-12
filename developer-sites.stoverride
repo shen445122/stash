@@ -4,6 +4,7 @@ desc: >-
   开发者站点折叠面板，适合直接作为日常开发环境检测 pack。
   聚合 GitHub、Stack Overflow、Vercel、Cloudflare、OpenAI、Anthropic，
   默认接入本仓库自托管 checker 脚本。
+  Version: v2026.04.12-1
 
 tiles:
   - name: GitHub-Check

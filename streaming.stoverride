@@ -4,6 +4,7 @@ desc: >-
   流媒体折叠面板，适合直接作为常见影音服务检测 pack。
   聚合 YouTube、Netflix、Disney+、Prime Video、Bilibili，
   默认接入本仓库自托管 checker 脚本。
+  Version: v2026.04.12-1
 
 tiles:
   - name: YouTube-Check

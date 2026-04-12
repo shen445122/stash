@@ -1,5 +1,9 @@
 name: Collapsed Tiles Test Example
 
+desc: >-
+  Minimal compatibility test pack for Stash script-provider debugging.
+  Version: v2026.04.12-1
+
 tiles:
   - name: Static-Test-Check
     title: Static Test
