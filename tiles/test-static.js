@@ -1,5 +1,1 @@
-module.exports = {
-  title: "Static Test",
-  content: "OK",
-  status: "success"
-};
+{ title: "Static Test", content: "OK", status: "success" }
