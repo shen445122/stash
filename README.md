@@ -51,18 +51,19 @@
 - `perplexity.js`
 - `anthropic.js`
 - `stackoverflow.js`
+- `primevideo.js`
+- `disneyplus.js`
+- `grok.js`
 
 这些脚本已经从 `TODO` 占位提升到**真实可运行的可用检查版本**。
 
-### 仍待继续升级的脚本
-- `grok.js`
-- `disneyplus.js`
-- `primevideo.js`
-
-下一批优先建议：
-- `primevideo.js`
-- `disneyplus.js`
-- `grok.js`
+### 当前状态
+- 主流 AI 服务、开发站点、常见流媒体 tile 已经基本覆盖到“可运行检查版本”
+- 当前下一阶段重点不再是把 placeholder 补齐，而是继续提升：
+  - 文案一致性
+  - pack 展示效果
+  - README 成品感
+  - 示例配置的上手友好度
 
 ---
 
