@@ -1,19 +1,64 @@
-// Netflix availability check
-const url = "https://www.netflix.com";
-
-async function run() {
-  try {
-    const resp = await fetch(url, { method: "GET" });
-    const ok = resp.status >= 200 && resp.status < 400;
-    return {
-      title: "Netflix",
-      icon: "https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/img/netflix.png",
-      content: ok ? "OK" : `HTTP ${resp.status}`,
-      status: ok ? "success" : "error",
-    };
-  } catch (e) {
-    return { title: "Netflix", content: String(e), status: "error" };
-  }
+async function request(method, params) {
+  return new Promise((resolve, reject) => {
+    const httpMethod = $httpClient[method.toLowerCase()];
+    httpMethod(params, (error, response, data) => {
+      resolve({ error, response, data });
+    });
+  });
 }
 
-module.exports = run();
+async function checkTitle(id) {
+  const { error, response } = await request(
+    "GET",
+    `https://www.netflix.com/title/${id}`
+  );
+
+  if (error || !response || !response.headers) {
+    return "";
+  }
+
+  const url = response.headers["X-Originating-Url"] || response.headers["x-originating-url"];
+  if (!url) {
+    return "";
+  }
+
+  const parts = url.split("/");
+  const loc = parts[3];
+  if (loc === "title") {
+    return "us";
+  }
+  return loc ? loc.split("-")[0] : "";
+}
+
+async function main() {
+  let country = await checkTitle(70143836);
+  if (country) {
+    $done({
+      content: `No Restriction (${country.toUpperCase()})`,
+      backgroundColor: "#E50914",
+    });
+    return;
+  }
+
+  country = await checkTitle(80197526);
+  if (country) {
+    $done({
+      content: `Originals Only (${country.toUpperCase()})`,
+      backgroundColor: "#E50914",
+    });
+    return;
+  }
+
+  $done({
+    content: "Not Available",
+    backgroundColor: "",
+  });
+}
+
+(async () => {
+  main()
+    .then((_) => {})
+    .catch((error) => {
+      $done({});
+    });
+})();

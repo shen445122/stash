@@ -1,24 +1,44 @@
-// ChatGPT Web availability check
-const url = "https://chatgpt.com";
-const headers = { "User-Agent": "Mozilla/5.0" };
-
-async function run() {
-  try {
-    const resp = await fetch(url, { method: "GET", headers });
-    const ok = resp.status >= 200 && resp.status < 400;
-    return {
-      title: "ChatGPT Web",
-      icon: "https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/img/chatgpt.png",
-      content: ok ? "OK" : `HTTP ${resp.status}`,
-      status: ok ? "success" : "error",
-    };
-  } catch (e) {
-    return {
-      title: "ChatGPT Web",
-      content: String(e),
-      status: "error",
-    };
-  }
+async function request(method, params) {
+  return new Promise((resolve, reject) => {
+    const httpMethod = $httpClient[method.toLowerCase()];
+    httpMethod(params, (error, response, data) => {
+      resolve({ error, response, data });
+    });
+  });
 }
 
-module.exports = run();
+async function main() {
+  const { error, data } = await request(
+    "GET",
+    "https://api.openai.com/compliance/cookie_requirements"
+  );
+
+  if (error) {
+    $done({
+      content: "Network Error",
+      backgroundColor: "",
+    });
+    return;
+  }
+
+  if (data && data.toLowerCase().includes("unsupported_country")) {
+    $done({
+      content: "Unsupported Country",
+      backgroundColor: "",
+    });
+    return;
+  }
+
+  $done({
+    content: "Available",
+    backgroundColor: "#88A788",
+  });
+}
+
+(async () => {
+  main()
+    .then((_) => {})
+    .catch((error) => {
+      $done({});
+    });
+})();

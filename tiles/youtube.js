@@ -1,19 +1,55 @@
-// YouTube availability check
-const url = "https://www.youtube.com";
-
-async function run() {
-  try {
-    const resp = await fetch(url, { method: "GET" });
-    const ok = resp.status >= 200 && resp.status < 400;
-    return {
-      title: "YouTube",
-      icon: "https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/img/youtube.png",
-      content: ok ? "OK" : `HTTP ${resp.status}`,
-      status: ok ? "success" : "error",
-    };
-  } catch (e) {
-    return { title: "YouTube", content: String(e), status: "error" };
-  }
+async function request(method, params) {
+  return new Promise((resolve, reject) => {
+    const httpMethod = $httpClient[method.toLowerCase()];
+    httpMethod(params, (error, response, data) => {
+      resolve({ error, response, data });
+    });
+  });
 }
 
-module.exports = run();
+async function main() {
+  const { error, data } = await request(
+    "GET",
+    "https://www.youtube.com/premium"
+  );
+
+  if (error) {
+    $done({
+      content: "Network Error",
+      backgroundColor: "",
+    });
+    return;
+  }
+
+  if (
+    data &&
+    data.toLowerCase().includes("youtube premium is not available in your country")
+  ) {
+    $done({
+      content: "Not Available",
+      backgroundColor: "",
+    });
+    return;
+  }
+
+  if (data && data.toLowerCase().includes("ad-free")) {
+    $done({
+      content: "Available",
+      backgroundColor: "#FF0000",
+    });
+    return;
+  }
+
+  $done({
+    content: "Unknown Error",
+    backgroundColor: "",
+  });
+}
+
+(async () => {
+  main()
+    .then((_) => {})
+    .catch((error) => {
+      $done({});
+    });
+})();
