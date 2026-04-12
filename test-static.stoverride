@@ -1,0 +1,16 @@
+name: Static Test Pack
+
+desc: >-
+  Minimal static Stash test pack for debugging script-provider behavior.
+  This version does not use fetch or async logic and only returns a fixed OK result.
+
+tiles:
+  - name: Static-Test
+    title: Static Test
+    icon: https://cdn.simpleicons.org/github
+    collapsed: true
+    url: https://example.com
+
+script-providers:
+  Static-Test:
+    url: https://raw.githubusercontent.com/shen445122/stash/main/tiles/test-static.js

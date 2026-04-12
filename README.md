@@ -90,6 +90,7 @@ https://raw.githubusercontent.com/shen445122/stash/main/collapsed-tiles.stoverri
 - `examples/ai-tools.yaml`
 - `examples/developer-sites.yaml`
 - `examples/streaming.yaml`
+- `examples/test-static.yaml`（用于定位 script-provider / JS 执行问题）
 
 它们现在都已经：
 - 带 `desc` 说明
