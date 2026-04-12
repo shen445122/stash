@@ -8,7 +8,7 @@ async function request(method, params) {
 }
 
 async function main() {
-  const { error, data } = await request(
+  const { error, response, data } = await request(
     "GET",
     "https://api.openai.com/compliance/cookie_requirements"
   );
@@ -21,7 +21,7 @@ async function main() {
     return;
   }
 
-  if (data && data.toLowerCase().includes("unsupported_country")) {
+  if (data.toLowerCase().includes("unsupported_country")) {
     $done({
       content: "Unsupported Country",
       backgroundColor: "",
@@ -30,7 +30,7 @@ async function main() {
   }
 
   $done({
-    content: "Available",
+    content: `Available`,
     backgroundColor: "#88A788",
   });
 }

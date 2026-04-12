@@ -8,7 +8,7 @@ async function request(method, params) {
 }
 
 async function main() {
-  const { error, data } = await request(
+  const { error, response, data } = await request(
     "GET",
     "https://www.youtube.com/premium"
   );
@@ -22,8 +22,9 @@ async function main() {
   }
 
   if (
-    data &&
-    data.toLowerCase().includes("youtube premium is not available in your country")
+    data
+      .toLowerCase()
+      .includes("youtube premium is not available in your country")
   ) {
     $done({
       content: "Not Available",
@@ -32,9 +33,9 @@ async function main() {
     return;
   }
 
-  if (data && data.toLowerCase().includes("ad-free")) {
+  if (data.toLowerCase().includes("ad-free")) {
     $done({
-      content: "Available",
+      content: `Available`,
       backgroundColor: "#FF0000",
     });
     return;

@@ -8,30 +8,28 @@ async function request(method, params) {
 }
 
 async function checkTitle(id) {
-  const { error, response } = await request(
+  const { error, response, data } = await request(
     "GET",
     `https://www.netflix.com/title/${id}`
   );
 
-  if (error || !response || !response.headers) {
+  if (error) {
     return "";
   }
 
-  const url = response.headers["X-Originating-Url"] || response.headers["x-originating-url"];
+  let url = response.headers["X-Originating-Url"];
   if (!url) {
     return "";
   }
-
-  const parts = url.split("/");
-  const loc = parts[3];
+  const loc = url.split("/")[3];
   if (loc === "title") {
     return "us";
   }
-  return loc ? loc.split("-")[0] : "";
+  return loc.split("-")[0];
 }
 
 async function main() {
-  let country = await checkTitle(70143836);
+  var country = await checkTitle(70143836);
   if (country) {
     $done({
       content: `No Restriction (${country.toUpperCase()})`,
@@ -40,7 +38,7 @@ async function main() {
     return;
   }
 
-  country = await checkTitle(80197526);
+  var country = await checkTitle(80197526);
   if (country) {
     $done({
       content: `Originals Only (${country.toUpperCase()})`,
