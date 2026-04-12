@@ -83,6 +83,21 @@ https://raw.githubusercontent.com/shen445122/stash/main/<file>
 https://raw.githubusercontent.com/shen445122/stash/main/collapsed-tiles.stoverride
 ```
 
+### 快速开始
+
+如果你只是想直接试用，优先从 `examples/` 里的 YAML 开始：
+
+- `examples/ai-tools.yaml`
+- `examples/developer-sites.yaml`
+- `examples/streaming.yaml`
+
+它们现在都已经：
+- 带 `desc` 说明
+- 使用更统一的 icon 风格
+- 默认指向本仓库自托管的 `tiles/*.js`
+
+适合先复制、再按自己的面板需求调整。
+
 ---
 
 ## 设计方向

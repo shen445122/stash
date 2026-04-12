@@ -1,5 +1,10 @@
 name: Streaming Collapsed Tiles
 
+desc: >-
+  Ready-to-use streaming pack for Stash.
+  Includes YouTube, Netflix, Disney+, Prime Video, and Bilibili,
+  wired to self-hosted checker scripts from this repository.
+
 tiles:
   - name: YouTube-Check
     title: YouTube
@@ -15,19 +20,19 @@ tiles:
 
   - name: DisneyPlus-Check
     title: Disney+
-    icon: https://www.google.com/s2/favicons?sz=64&domain=disneyplus.com
+    icon: https://cdn.simpleicons.org/disneyplus
     collapsed: true
     url: https://www.disneyplus.com
 
   - name: PrimeVideo-Check
     title: Prime Video
-    icon: https://www.google.com/s2/favicons?sz=64&domain=primevideo.com
+    icon: https://cdn.simpleicons.org/amazonprimevideo
     collapsed: true
     url: https://www.primevideo.com
 
   - name: Bilibili-Check
     title: Bilibili
-    icon: https://www.google.com/s2/favicons?sz=64&domain=bilibili.com
+    icon: https://cdn.simpleicons.org/bilibili
     collapsed: true
     url: https://www.bilibili.com
 
