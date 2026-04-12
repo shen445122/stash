@@ -1,5 +1,8 @@
 name: Collapsed Tiles Example
-desc: 基础折叠面板示例，包含 ChatGPT、YouTube、Netflix 等常见站点。
+
+desc: >-
+  基础折叠面板示例，适合直接作为 Stash 起步配置。
+  包含 ChatGPT、YouTube、Netflix 等常见站点，并默认接入本仓库自托管 checker 脚本。
 
 tiles:
   - name: ChatGPT-Web-Check

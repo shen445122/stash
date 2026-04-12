@@ -1,40 +1,44 @@
 name: Developer Sites Collapsed Tiles
-desc: 开发者站点折叠面板，聚合 GitHub、Stack Overflow、Vercel、Cloudflare、OpenAI、Anthropic。
+
+desc: >-
+  开发者站点折叠面板，适合直接作为日常开发环境检测 pack。
+  聚合 GitHub、Stack Overflow、Vercel、Cloudflare、OpenAI、Anthropic，
+  默认接入本仓库自托管 checker 脚本。
 
 tiles:
   - name: GitHub-Check
     title: GitHub
-    icon: https://www.google.com/s2/favicons?sz=64&domain=github.com
+    icon: https://cdn.simpleicons.org/github
     collapsed: true
     url: https://github.com
 
   - name: StackOverflow-Check
     title: Stack Overflow
-    icon: https://www.google.com/s2/favicons?sz=64&domain=stackoverflow.com
+    icon: https://cdn.simpleicons.org/stackoverflow
     collapsed: true
     url: https://stackoverflow.com
 
   - name: Vercel-Check
     title: Vercel
-    icon: https://www.google.com/s2/favicons?sz=64&domain=vercel.com
+    icon: https://cdn.simpleicons.org/vercel
     collapsed: true
     url: https://vercel.com
 
   - name: Cloudflare-Check
     title: Cloudflare
-    icon: https://www.google.com/s2/favicons?sz=64&domain=cloudflare.com
+    icon: https://cdn.simpleicons.org/cloudflare
     collapsed: true
     url: https://www.cloudflare.com
 
   - name: OpenAI-Check
     title: OpenAI
-    icon: https://www.google.com/s2/favicons?sz=64&domain=openai.com
+    icon: https://cdn.simpleicons.org/openai
     collapsed: true
     url: https://openai.com
 
   - name: Anthropic-Check
     title: Anthropic
-    icon: https://www.google.com/s2/favicons?sz=64&domain=anthropic.com
+    icon: https://cdn.simpleicons.org/anthropic
     collapsed: true
     url: https://www.anthropic.com
 

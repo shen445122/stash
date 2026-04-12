@@ -1,5 +1,9 @@
 name: AI Tools Collapsed Tiles
-desc: AI 工具折叠面板，聚合 ChatGPT、Claude、Gemini、Grok、Perplexity、Copilot。
+
+desc: >-
+  AI 工具折叠面板，适合直接作为常用 AI 服务检测 pack。
+  聚合 ChatGPT、Claude、Gemini、Grok、Perplexity、GitHub Copilot，
+  默认接入本仓库自托管 checker 脚本。
 
 tiles:
   - name: ChatGPT-Web
@@ -10,31 +14,31 @@ tiles:
 
   - name: Claude-Check
     title: Claude
-    icon: https://www.google.com/s2/favicons?sz=64&domain=claude.ai
+    icon: https://cdn.simpleicons.org/anthropic
     collapsed: true
     url: https://claude.ai
 
   - name: Gemini-Check
     title: Gemini
-    icon: https://www.google.com/s2/favicons?sz=64&domain=gemini.google.com
+    icon: https://cdn.simpleicons.org/googlegemini
     collapsed: true
     url: https://gemini.google.com
 
   - name: Grok-Check
     title: Grok
-    icon: https://www.google.com/s2/favicons?sz=64&domain=x.ai
+    icon: https://cdn.simpleicons.org/x
     collapsed: true
-    url: https://x.ai
+    url: https://grok.com
 
   - name: Perplexity-Check
     title: Perplexity
-    icon: https://www.google.com/s2/favicons?sz=64&domain=perplexity.ai
+    icon: https://cdn.simpleicons.org/perplexity
     collapsed: true
     url: https://www.perplexity.ai
 
   - name: Copilot-Check
     title: GitHub Copilot
-    icon: https://www.google.com/s2/favicons?sz=64&domain=github.com
+    icon: https://cdn.simpleicons.org/githubcopilot
     collapsed: true
     url: https://github.com/features/copilot
 
