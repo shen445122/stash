@@ -1,16 +1,12 @@
-name: Static Test Pack
-
-desc: >-
-  Minimal static Stash test pack for debugging script-provider behavior.
-  This version does not use fetch or async logic and only returns a fixed OK result.
+name: Collapsed Tiles Test Example
 
 tiles:
-  - name: Static-Test
+  - name: Static-Test-Check
     title: Static Test
-    icon: https://cdn.simpleicons.org/github
+    icon: https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/img/chatgpt.png
     collapsed: true
     url: https://example.com
 
 script-providers:
-  Static-Test:
+  Static-Test-Check:
     url: https://raw.githubusercontent.com/shen445122/stash/main/tiles/test-static.js
