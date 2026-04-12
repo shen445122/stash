@@ -48,22 +48,21 @@
 - `gemini.js`
 - `copilot.js`
 - `bilibili.js`
+- `perplexity.js`
+- `anthropic.js`
+- `stackoverflow.js`
 
 这些脚本已经从 `TODO` 占位提升到**真实可运行的可用检查版本**。
 
 ### 仍待继续升级的脚本
 - `grok.js`
-- `perplexity.js`
 - `disneyplus.js`
 - `primevideo.js`
-- `stackoverflow.js`
-- `anthropic.js`
 
 下一批优先建议：
-- `perplexity.js`
-- `stackoverflow.js`
-- `anthropic.js`
 - `primevideo.js`
+- `disneyplus.js`
+- `grok.js`
 
 ---
 
