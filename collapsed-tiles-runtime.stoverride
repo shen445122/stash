@@ -2,7 +2,7 @@ name: Collapsed Tiles Runtime Pack
 
 desc: >-
   Runtime-oriented collapsed tiles pack based on the upstream working example.
-  Version: v2026.04.13-1
+  Version: v2026.04.13-2
 
 
 tiles:
@@ -29,7 +29,7 @@ tiles:
 
 script-providers:
   ChatGPT-Web-Check:
-    url: https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/script/chatgpt-web.js
+    url: https://raw.githubusercontent.com/shen445122/stash/main/tiles/chatgpt-web.js
   ChatGPT-App-Check:
     url: https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/script/chatgpt-app.js
   YouTube-Check:
