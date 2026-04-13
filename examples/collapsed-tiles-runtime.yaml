@@ -31,7 +31,7 @@ script-providers:
   ChatGPT-Web-Check:
     url: https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/script/chatgpt-web.js
   ChatGPT-App-Check:
-    url: https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/main/tiles/chatgpt-app.js
+    url: https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/script/chatgpt-app.js
   YouTube-Check:
     url: https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/script/youtube.js
   Netflix-Check:
